@@ -1,0 +1,49 @@
+﻿{
+  // ============================================================================
+  // UML-Suite: GLOBALE Settings  (wirken USER-WEIT in jedem VSCode-Fenster)
+  // ============================================================================
+  //
+  // Wird von setup\bootstrap-suite.ps1 gelesen und in
+  //   %APPDATA%\Code\User\settings.json
+  // gemerged oder ersetzt.
+  //
+  // Hier stehen NUR Keys, die toolweit sinnvoll sind:
+  //   - PlantUML-Toolchain (jar-Pfad, dot-Pfad, Render-Modus)
+  //   - Markdown Preview Enhanced
+  //   - Markdownlint
+  //   - Datei-Assoziationen fuer .puml/.iuml/.plantuml/.wsd
+  //
+  // Editor-Verhaltens-Settings (autoSave, rulers, wordWrap, etc.) gehoeren
+  // in templates\.vscode\settings.json und werden pro Projekt aktiviert,
+  // wenn das Template in das jeweilige Projekt kopiert wird.
+  //
+  // Begruendung der Trennung: globales autoSave/wordWrap waere ueberraschend
+  // in Nicht-UML-Projekten und stoert Workflows mit Hot-Reload-Tools.
+  // ============================================================================
+
+  // PlantUML: lokales Rendering ohne Online-Server
+  "plantuml.render": "Local",
+  "plantuml.dotPath": "C:\\Program Files\\Graphviz\\bin\\dot.exe",
+  "plantuml.exportFormat": "svg",
+  "plantuml.previewAutoUpdate": true,
+
+  // Markdown Preview Enhanced: PlantUML aus zentraler Suite-jar laden
+  "markdown-preview-enhanced.plantumlJarPath": "C:\\00_Repositories\\_Set-Ups\\_dev\\Microsoft.Visual-Studio-Code_IDE\\.UML-Diagram_Suite\\setup\\plantuml.jar",
+  "markdown-preview-enhanced.mermaidTheme": "default",
+
+  // Markdownlint: Standardregeln, ohne Zeilenlaengen- und Inline-HTML-Pruefung
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD033": false
+  },
+
+  // Datei-Assoziationen fuer PlantUML-Endungen
+  "files.associations": {
+    "*.puml": "plantuml",
+    "*.iuml": "plantuml",
+    "*.plantuml": "plantuml",
+    "*.wsd": "plantuml"
+  }
+}
+
