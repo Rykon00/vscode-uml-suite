@@ -1,0 +1,27 @@
+﻿{
+  // === Settings fuer die UML-Diagram-Suite selbst ===
+  // (beim Editieren/Erweitern der Suite - NICHT zum Kopieren in Projekte)
+
+  // PlantUML-Extension: lokales Rendering
+  "plantuml.render": "Local",
+  "plantuml.dotPath": "C:\\\\Program Files\\\\Graphviz\\\\bin\\\\dot.exe",
+  "plantuml.exportFormat": "svg",
+  "plantuml.previewAutoUpdate": true,
+
+  // Markdown Preview Enhanced: explizit auf unsere lokale jar zeigen
+  "markdown-preview-enhanced.plantumlJarPath": "C:\\00_Repositories\\_Set-Ups\\_dev\\Microsoft.Visual-Studio-Code_IDE\\.UML-Diagram_Suite\\setup\\plantuml.jar",
+  "markdown-preview-enhanced.mermaidTheme": "default",
+
+  // Markdownlint: lockerer fuer Doku-Files
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD033": false
+  },
+
+  // Editor
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 800,
+  "editor.rulers": [100],
+  "editor.wordWrap": "on"
+}

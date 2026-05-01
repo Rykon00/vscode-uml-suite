@@ -1,0 +1,20 @@
+﻿# Binaere Dependencies (werden via install-deps.ps1 geholt)
+setup/plantuml.jar
+
+# Generierte Diagramme
+out/
+**/out/
+
+# VSCode-User-State
+.vscode/.history/
+
+# OS-Muell
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor-Backups + Logs
+*.bak
+*.swp
+*.log
+tmp/

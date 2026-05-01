@@ -1,0 +1,51 @@
+﻿{
+  // === PlantUML ===
+  // "Local" = lokales Rendering via Java + Graphviz (nichts geht ins Internet)
+  "plantuml.render": "Local",
+  // Expliziter Pfad zu Graphviz dot.exe (sicherheitshalber, falls PATH-Fragmente fehlen)
+  "plantuml.dotPath": "C:\\Program Files\\Graphviz\\bin\\dot.exe",
+  // Standard-Exportformat für gerenderte Diagramme
+  "plantuml.exportFormat": "svg",
+  // Exporte landen in out/uml/ statt neben den .puml-Files
+  "plantuml.exportSubFolder": false,
+  "plantuml.exportOutDir": "out/uml",
+  // Preview aktualisiert sich automatisch beim Tippen
+  "plantuml.previewAutoUpdate": true,
+  // Suchpfade fuer !include-Direktiven in .puml-Files
+  "plantuml.includepaths": ["./uml", "./uml/_shared"],
+
+  // === Markdown Preview Enhanced ===
+  // Mermaid Standard-Theme (alternativ: "dark", "forest", "neutral")
+  "markdown-preview-enhanced.mermaidTheme": "default",
+  // PlantUML im MD-Preview lokal rendern (kein Online-Server)
+  "markdown-preview-enhanced.plantumlServer": "",
+  // Lokale plantuml.jar (zentral in der Suite gepflegt)
+  "markdown-preview-enhanced.plantumlJarPath": "C:\\00_Repositories\\_Set-Ups\\_dev\\Microsoft.Visual-Studio-Code_IDE\\.UML-Diagram_Suite\\setup\\plantuml.jar",
+
+  // === Markdownlint ===
+  // Vernuenftige Defaults: alles an, ausser Zeilenlaenge und Inline-HTML
+  "markdownlint.config": {
+    "default": true,
+    "MD013": false,
+    "MD033": false
+  },
+
+  // === Datei-Assoziationen ===
+  // Damit Syntax-Highlighting auch bei Nicht-Standard-Endungen greift
+  "files.associations": {
+    "*.puml": "plantuml",
+    "*.iuml": "plantuml",
+    "*.plantuml": "plantuml",
+    "*.wsd": "plantuml"
+  },
+
+  // === Auto-Save ===
+  // Live-Preview braucht gespeicherte Files, daher kurze Verzoegerung
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 800,
+
+  // === Editor ===
+  "editor.rulers": [100],
+  "editor.wordWrap": "on"
+}
+

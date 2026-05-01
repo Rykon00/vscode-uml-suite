@@ -1,0 +1,36 @@
+﻿@startuml 04-activity-example
+' Beispiel: Bestellprozess
+' Render-Test fuer: start/stop, Verzweigungen, parallele Pfade
+
+title Beispiel: Bestellprozess (Aktivitaetsdiagramm)
+
+start
+:Warenkorb pruefen;
+
+if (Warenkorb leer?) then (ja)
+  :Hinweis anzeigen;
+  stop
+else (nein)
+  :Zur Kasse weiterleiten;
+endif
+
+:Adresse erfassen;
+:Zahlungsart waehlen;
+
+fork
+  :Zahlung autorisieren;
+fork again
+  :Lagerbestand reservieren;
+end fork
+
+if (Beides erfolgreich?) then (ja)
+  :Bestellung bestaetigen;
+  :Bestaetigungsmail senden;
+  stop
+else (nein)
+  :Fehler behandeln;
+  :Zahlung stornieren;
+  stop
+endif
+
+@enduml

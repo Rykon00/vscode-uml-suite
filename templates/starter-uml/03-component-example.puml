@@ -1,0 +1,26 @@
+﻿@startuml 03-component-example
+' Beispiel: Webapp-Architektur (sehr vereinfacht)
+' Render-Test fuer: Pakete, Komponenten, Interfaces, Pfeile
+
+title Beispiel: Webapp-Architektur (Komponentendiagramm)
+
+package "Frontend" {
+  [SPA (React)] as SPA
+}
+
+package "Backend" {
+  [API Gateway] as API
+  [Auth Service] as Auth
+  [User Service] as User
+}
+
+database "PostgreSQL" as DB
+cloud "OAuth Provider" as OAuth
+
+SPA --> API : HTTPS / JSON
+API --> Auth : gRPC
+API --> User : gRPC
+Auth --> OAuth : OAuth2 Flow
+User --> DB : SQL
+
+@enduml

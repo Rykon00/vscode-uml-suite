@@ -1,0 +1,64 @@
+﻿{
+  "Class Diagram Skeleton": {
+    "prefix": "uml-class",
+    "scope": "plantuml",
+    "body": [
+      "@startuml ${1:DiagramName}",
+      "",
+      "class ${2:ClassName} {",
+      "  +${3:attribute}: ${4:Type}",
+      "  +${5:method}(): ${6:ReturnType}",
+      "}",
+      "",
+      "@enduml"
+    ],
+    "description": "Minimales Klassendiagramm-Geruest"
+  },
+  "Sequence Diagram Skeleton": {
+    "prefix": "uml-sequence",
+    "scope": "plantuml",
+    "body": [
+      "@startuml ${1:DiagramName}",
+      "",
+      "actor ${2:User}",
+      "participant ${3:System}",
+      "",
+      "${2:User} -> ${3:System}: ${4:Request}",
+      "${3:System} --> ${2:User}: ${5:Response}",
+      "",
+      "@enduml"
+    ],
+    "description": "Minimales Sequenzdiagramm-Geruest"
+  },
+  "Component Diagram Skeleton": {
+    "prefix": "uml-component",
+    "scope": "plantuml",
+    "body": [
+      "@startuml ${1:DiagramName}",
+      "",
+      "[${2:ComponentA}] --> [${3:ComponentB}] : ${4:uses}",
+      "",
+      "@enduml"
+    ],
+    "description": "Minimales Komponentendiagramm-Geruest"
+  },
+  "Activity Diagram Skeleton": {
+    "prefix": "uml-activity",
+    "scope": "plantuml",
+    "body": [
+      "@startuml ${1:DiagramName}",
+      "",
+      "start",
+      ":${2:Step 1};",
+      "if (${3:Condition?}) then (yes)",
+      "  :${4:Step 2a};",
+      "else (no)",
+      "  :${5:Step 2b};",
+      "endif",
+      "stop",
+      "",
+      "@enduml"
+    ],
+    "description": "Minimales Aktivitaetsdiagramm-Geruest"
+  }
+}

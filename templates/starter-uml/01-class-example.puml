@@ -1,0 +1,31 @@
+﻿@startuml 01-class-example
+' Beispiel: Klassendiagramm einer Mini-Bibliothek
+' Render-Test fuer: Graphviz dot, Klassen-Layout, Vererbung, Assoziation
+
+title Beispiel: Bibliothek (Klassendiagramm)
+
+abstract class Medium {
+  +titel: String
+  +jahr: Integer
+  +ausleihen(): void
+}
+
+class Buch extends Medium {
+  +autor: String
+  +seitenzahl: Integer
+}
+
+class Hoerbuch extends Medium {
+  +sprecher: String
+  +laufzeitMin: Integer
+}
+
+class Nutzer {
+  +name: String
+  +ausweisNr: String
+  +ausleihen(m: Medium): void
+}
+
+Nutzer "1" -- "0..*" Medium : leiht aus
+
+@enduml

@@ -1,0 +1,32 @@
+﻿@startuml 02-sequence-example
+' Beispiel: Login-Ablauf
+' Render-Test fuer: Aktivierungsbalken, Notes, alt-Block
+
+title Beispiel: Login-Ablauf (Sequenzdiagramm)
+
+actor Nutzer
+participant Frontend
+participant Backend
+database Datenbank
+
+Nutzer -> Frontend: gibt Credentials ein
+activate Frontend
+Frontend -> Backend: POST /login
+activate Backend
+Backend -> Datenbank: SELECT user WHERE email=?
+activate Datenbank
+Datenbank --> Backend: User-Datensatz
+deactivate Datenbank
+
+alt Passwort korrekt
+  Backend --> Frontend: 200 OK + Session-Token
+  Frontend --> Nutzer: Weiterleitung zum Dashboard
+else Passwort falsch
+  Backend --> Frontend: 401 Unauthorized
+  Frontend --> Nutzer: Fehlermeldung
+end
+
+deactivate Backend
+deactivate Frontend
+
+@enduml

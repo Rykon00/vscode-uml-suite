@@ -1,0 +1,12 @@
+﻿{
+  "recommendations": [
+    "jebbs.plantuml",
+    "systemticks.c4-dsl-extension",
+    "bierner.markdown-mermaid",
+    "bpruitt-goddard.mermaid-markdown-syntax-highlighting",
+    "shd101wyy.markdown-preview-enhanced",
+    "yzhang.markdown-all-in-one",
+    "hediet.vscode-drawio",
+    "davidanson.vscode-markdownlint"
+  ]
+}
